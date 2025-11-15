@@ -17,10 +17,10 @@
     --color-gradient-1-mid:   #6b5fb5;
     --color-gradient-1-end:   #a8a4e0;
 
-
-
     --animate-aurora1: aurora-move-1 12s ease-in-out infinite;
     --animate-aurora2: aurora-move-2 15s ease-in-out infinite;
+    --animate-aurora3: aurora-move-3 18s ease-in-out infinite;
+    --animate-aurora4: aurora-move-4 20s ease-in-out infinite;
 
     @keyframes aurora-move-1 {
         0%   { transform: translateX(-50%) translateY(-30%) rotate(15deg); }
@@ -38,6 +38,21 @@
         100% { transform: translateX(40%) translateY(-20%) rotate(-10deg); }
     }
 
+    @keyframes aurora-move-3 {
+        0%   { transform: translateX(-60%) translateY(0%) rotate(5deg); }
+        25%  { transform: translateX(40%) translateY(50%) rotate(-5deg); }
+        50%  { transform: translateX(60%) translateY(100%) rotate(10deg); }
+        75%  { transform: translateX(-40%) translateY(50%) rotate(-10deg); }
+        100% { transform: translateX(-60%) translateY(0%) rotate(5deg); }
+    }
+
+    @keyframes aurora-move-4 {
+        0%   { transform: translateX(30%) translateY(-10%) rotate(-5deg); }
+        25%  { transform: translateX(-30%) translateY(40%) rotate(8deg); }
+        50%  { transform: translateX(-50%) translateY(70%) rotate(-12deg); }
+        75%  { transform: translateX(40%) translateY(40%) rotate(5deg); }
+        100% { transform: translateX(30%) translateY(-10%) rotate(-5deg); }
+    }
 
 }
 
