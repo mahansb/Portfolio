@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* Light theme (default) */
+@theme {
+    --color-body: #dedeef;
+    --color-navBar: #bebedc;
+    --color-navBar-dark: #8C8CB5;
+    --color-text: #1c1c31;
+    --color-text-secondary: #E2E2ED;
+    --color-border: #656591;
+    --color-border-dark: #4E4E78;
+    --color-hover: #4a4a73;
+    --color-color-white: #E2E2ED;
+    --color-gradient-start: #4a4a73;
+    --color-gradient-end: #1c1c31;
+    --color-gradient-1-start: #b9b9d4;
+    --color-gradient-1-mid:   #4a4a73;
+    --color-gradient-1-end:   #1c1c31;
+
+    --animate-gradient: gradient-move 8s ease infinite;
+
+    @keyframes gradient-move {
+
+        0% { background-position: 50% 0%; }
+        50% { background-position: 50% 100%; }
+        100% { background-position: 50% 0%; }
+    }
+}
+
+/* Dark theme overrides */
+.dark {
+    --color-body: #0f0f1a;
+    --color-navBar: #1a1a2e;
+    --color-navBar-dark: #1a1a2e;
+    --color-text: #66fff9;
+    --color-text-secondary: #102A28;
+    --color-darkText: #222222;
+    --color-border: #00fff3;
+    --color-border-dark: #00fff3;
+    --color-hover: #00e6d9;
+    --color-color-white: white;
+    --color-gradient-start: #00fff3;
+    --color-gradient-end: #00e6d9;
+    --color-gradient-1-start: #103130;
+    --color-gradient-1-mid:   #00fff3;
+    --color-gradient-1-end:   #00bcb4;
+
+}
+
+

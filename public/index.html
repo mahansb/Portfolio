@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal WebSite - Mahan Soudeh Sarabi | Frontend Developer</title>
+    <link rel="stylesheet" href="./output.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-body">
+
+<!-- header -->
+<header class=" flex justify-center items-center w-full h-[150px] bg-gradient-to-b from-body to-navBar">
+
+    <!-- navbar -->
+    <nav class="flex items-center justify-between w-[85%] mx-auto py-3 md:w-[90%] rounded-3xl border-[3px]
+    border-border bg-navBar shadow-lg z-40">
+
+        <!-- Left: Profile pic -->
+        <div class="pl-6 flex-1">
+            <img src="./assets/images/img2.png" alt="Profile photo"
+                 class="w-17 h-17 hover:scale-110 transition-transform duration-300 cursor-pointer
+                 bg-color-white rounded-2xl object-cover border-2 border-border shadow-md">
+        </div>
+
+        <!-- Center: Desktop Menu -->
+        <ul class="hidden md:flex justify-center items-center flex-1 text-text text-lg">
+            <li>
+                <a href="#about"
+                   class="px-4 py-2 rounded-lg hover:text-color-white hover:bg-hover
+                   duration-300">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="#project"
+                   class="px-4 py-2 rounded-lg hover:text-color-white hover:bg-hover transition-colors
+                   duration-300">
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a href="#contact"
+                   class="px-4 py-2 rounded-lg hover:text-color-white hover:bg-hover transition-colors
+                   duration-300">
+                    Contact
+                </a>
+            </li>
+        </ul>
+
+
+        <!-- Right: Desktop Buttons -->
+        <div class="flex items-end justify-end pr-6 space-x-4 flex-1">
+            <!-- Desktop buttons -->
+            <div class="hidden md:flex items-center space-x-4">
+                <button class="theme-toggle w-16 h-10 rounded-lg bg-color-white shadow-md hover:scale-110 transition-all
+                duration-300">
+                    🌙
+                </button>
+                <button class="w-16 h-10 rounded-lg bg-color-white shadow-md hover:scale-110 transition-all
+                 duration-300">
+                    🌐
+                </button>
+            </div>
+        </div>
+
+        <!-- Hamburger -->
+        <button id="hamburger-btn"
+                class="md:hidden flex flex-col justify-between mr-6 w-5 h-5 z-50 transform transition-transform
+                duration-300">
+            <span class="block h-0.5 w-full bg-border-dark rounded transform transition duration-300 origin-center"></span>
+            <span class="block h-0.5 w-full bg-border-dark rounded transform transition duration-300 origin-center"></span>
+            <span class="block h-0.5 w-full bg-border-dark rounded transform transition duration-300 origin-center"></span>
+        </button>
+
+        <!--Sliding Mobile Menu-->
+        <ul id="mobile-menu"
+            class="fixed top-0 right-0 w-md max-sm:w-[75%] md:hidden h-screen rounded-l-lg border-[3px]
+            border-border bg-navBar-dark flex flex-col pt-30 px-5 space-y-5 transform
+            translate-x-full opacity-0 transition-all duration-500 z-45 shadow-xl">
+            <!-- Menu items -->
+            <li>
+                <a href="#about"
+                   class="inline-block w-full text-center text-text
+                    border border-text/40 hover:bg-border hover:text-text-secondary rounded-lg px-4 py-3
+                    transition-all duration-300 shadow-sm">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#project"
+                   class="inline-block w-full text-center text-text
+                    border border-text/40 hover:bg-border hover:text-text-secondary rounded-lg px-4 py-3
+                    transition-all duration-300 shadow-sm">
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a href="#contact"
+                   class="inline-block w-full text-center text-text
+                    border border-text/40 hover:bg-border hover:text-text-secondary rounded-lg px-4 py-3
+                    transition-all duration-300 shadow-sm">
+                    Contact
+                </a>
+            </li>
+
+            <div class="flex items-center space-x-4 mt-auto mb-6">
+                <button class="theme-toggle flex-1 h-10 rounded-lg bg-color-white shadow-md hover:scale-110
+                transition-all duration-300">
+                    🌙
+                </button>
+                <button class="flex-1 h-10 rounded-lg bg-color-white shadow-md hover:scale-110
+                transition-all duration-300">
+                    🌐
+                </button>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section data-aos="fade-up" data-aos-delay="200" id="about" class=" w-[90%] mx-auto mt-10 md:mt-10 text-center flex flex-col items-center justify-center space-y-7">
+    <!-- Hero Title -->
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text
+               bg-gradient-to-r from-gradient-start to-gradient-end">
+        Hi, I'm Mahan Soudeh Sarabi
+    </h1>
+
+    <!-- Intro Paragraph -->
+    <p class="text-text/90 text-lg sm:text-xl md:text-2xl max-w-4xl">
+        As a front-end developer, I design and build responsive, intuitive web interfaces, translating complex designs
+        into clean, reusable code that balances aesthetics with functionality.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="mt-4 flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
+        <!-- View My Work -->
+        <a href="#project"
+           class="flex-1 px-8 py-3 bg-gradient-to-r from-gradient-start to-gradient-end text-text-secondary
+                  font-semibold rounded-full shadow-lg  hover:scale-110 hover:shadow-xl transition-all duration-300 text-center">
+            View My Work
+        </a>
+
+        <!-- Download Resume -->
+        <a href="#"
+           class="flex-1 px-8 py-3 bg-gradient-to-r from-gradient-start to-gradient-end text-text-secondary
+                  font-semibold rounded-full shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 text-center">
+            Download Resume
+        </a>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section data-aos="fade-up" id="skills" class="w-[90%] mx-auto mt-15 md:mt-13 text-center flex flex-col items-center justify-center space-y-7">
+
+    <!-- Top divider line -->
+    <div class="w-24 h-1 bg-gradient-to-r from-gradient-start to-gradient-end rounded mb-4"></div>
+
+    <!-- Section Title -->
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text
+               bg-gradient-to-r from-gradient-start to-gradient-end">
+        Skills & Tools
+    </h2>
+
+    <!-- Subtitle -->
+    <p class="text-text/80 text-lg sm:text-xl max-w-4xl">
+        Some of the tools I use regularly, while continuously refining my skills and adopting best practices to deliver projects that both delight users and streamline development.
+    </p>
+
+    <!-- Skills Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 my-5 w-full">
+
+        <!-- Skill Card -->
+        <div data-aos="zoom-in" data-aos-delay="100" class="flex flex-col items-center p-4 rounded-2xl border border-border bg-navBar shadow-md hover:scale-105 transition-all duration-300">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"
+                 class="w-12 h-12">
+            <span class="text-text font-medium">HTML</span>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="200" class="flex flex-col items-center p-4 rounded-2xl border border-border bg-navBar shadow-md hover:scale-105 transition-all duration-300">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"
+                 class="w-12 h-12">
+            <span class="text-text font-medium">CSS</span>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="300" class="flex flex-col items-center p-4 rounded-2xl border border-border bg-navBar shadow-md hover:scale-105 transition-all duration-300">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                 alt="JavaScript" class="w-12 h-12">
+            <span class="text-text font-medium">JavaScript</span>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="400" class="flex flex-col items-center p-4 rounded-2xl border border-border bg-navBar shadow-md hover:scale-105 transition-all duration-300">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg"
+                 alt="Tailwind" class="w-12 h-12">
+            <span class="text-text font-medium">Tailwind</span>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="500" class="flex flex-col items-center p-4 rounded-2xl border border-border bg-navBar shadow-md hover:scale-105 transition-all duration-300">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+                 class="w-12 h-12">
+            <span class="text-text font-medium">React</span>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="600" class="flex flex-col items-center p-4 rounded-2xl border border-border bg-navBar shadow-md hover:scale-105 transition-all duration-300">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+                 class="w-12 h-12">
+            <span class="text-text font-medium">Git</span>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section data-aos="fade-up" id="project" class="relative w-[90%] mx-auto mt-15 md:mt-10 text-center flex flex-col items-center justify-center space-y-7">
+
+    <!-- Top divider line -->
+    <div class="w-24 h-1 bg-gradient-to-r from-gradient-start to-gradient-end rounded mb-4"></div>
+
+    <!-- Section Title -->
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text
+               bg-gradient-to-r from-gradient-start to-gradient-end">
+        Projects
+    </h2>
+
+    <!-- Optional subtitle -->
+    <p class="text-text/70 text-lg sm:text-xl max-w-3xl mx-auto">
+        A selection of recent projects that showcase my front-end development skills, responsive design, and clean, maintainable code.
+    </p>
+
+    <!-- Projects Grid -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-2 w-full">
+
+        <!-- Project Card 1 -->
+        <div data-aos="fade-up" data-aos-delay="100" class="group relative bg-navBar rounded-3xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300 h-80">
+            <!-- Image / Thumbnail -->
+            <img src="./assets/images/snapp%20clone.png" alt="Project 1"
+                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-navBar-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6">
+                <h3 class="text-lg font-bold text-text mb-1">Snapp Clone</h3>
+                <p class="text-text text-sm">A responsive clone of a ride-sharing service landing page</p>
+                <div class="mt-0 flex space-x-4 justify-center items-center">
+                    <a href="https://mahansb.github.io/Project-1-Snapp-Clone/" class="px-5 my-2 py-1 bg-gradient-end text-text-secondary rounded-lg text-sm font-medium hover:scale-105 transition-all duration-300">Demo</a>
+                    <a href="https://github.com/mahansb/Project-1-Snapp-Clone.git" class="px-5 my-2 py-1 bg-gradient-end text-text-secondary rounded-lg text-sm font-medium hover:scale-105 transition-all duration-300">Code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div data-aos="fade-up" data-aos-delay="300" class="group relative bg-navBar rounded-3xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300 h-80">
+            <!-- Image / Thumbnail -->
+            <img src="" alt="Project 2"
+                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-navBar-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6">
+                <h3 class="text-lg font-bold text-text mb-1">Title</h3>
+                <p class="text-text text-sm">Body</p>
+                <div class="mt-0 flex space-x-4 justify-center items-center">
+                    <a href="" class="px-5 my-2 py-1 bg-gradient-end text-text-secondary rounded-lg text-sm font-medium hover:scale-105 transition-all duration-300">Demo</a>
+                    <a href="" class="px-5 my-2 py-1 bg-gradient-end text-text-secondary rounded-lg text-sm font-medium hover:scale-105 transition-all duration-300">Code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div data-aos="fade-up" data-aos-delay="500" class="group relative bg-navBar rounded-3xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300 h-80">
+            <!-- Image / Thumbnail -->
+            <img src="" alt="Project 3"
+                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-navBar-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6">
+                <h3 class="text-lg font-bold text-text mb-1">Title</h3>
+                <p class="text-text text-sm">Body</p>
+                <div class="mt-0 flex space-x-4 justify-center items-center">
+                    <a href="" class="px-5 my-2 py-1 bg-gradient-end text-text-secondary rounded-lg text-sm font-medium hover:scale-105 transition-all duration-300">Demo</a>
+                    <a href="" class="px-5 my-2 py-1 bg-gradient-end text-text-secondary rounded-lg text-sm font-medium hover:scale-105 transition-all duration-300">Code</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section data-aos="fade-up" id="contact" class="w-[90%] mx-auto mt-15 md:mt-10 text-center flex flex-col items-center justify-center space-y-5">
+    <div class="w-24 h-1 bg-gradient-to-r from-gradient-start to-gradient-end rounded mb-4"></div>
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text
+               bg-gradient-to-r from-gradient-start to-gradient-end">
+        Contact Me
+    </h2>
+    <p class="text-text/80 text-lg sm:text-xl max-w-4xl">
+        Feel free to reach out for collaborations, projects, or just a friendly chat!
+    </p>
+
+    <div class="flex space-x-4">
+        <a href="https://github.com/mahansb" class="text-text hover:text-gradient-end transition-all duration-300">GitHub</a>
+        <a href="https://www.linkedin.com/in/mahansb" class="text-text hover:text-gradient-end transition-all duration-300">LinkedIn</a>
+        <a href="mailto:mahan_s.sarabi@yahoo.com" class="text-text hover:text-gradient-end transition-all duration-300">Email</a>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="w-full py-6 mt-5 bg-navBar-dark text-text/70 text-center">
+    <p>© 2025 Mahan Soudeh Sarabi. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
