@@ -13,18 +13,32 @@
     --color-color-white: #E2E2ED;
     --color-gradient-start: #4a4a73;
     --color-gradient-end: #1c1c31;
-    --color-gradient-1-start: #b9b9d4;
-    --color-gradient-1-mid:   #4a4a73;
-    --color-gradient-1-end:   #1c1c31;
+    --color-gradient-1-start: #4a4a73;
+    --color-gradient-1-mid:   #6b5fb5;
+    --color-gradient-1-end:   #a8a4e0;
 
-    --animate-gradient: gradient-move 8s ease infinite;
 
-    @keyframes gradient-move {
 
-        0% { background-position: 50% 0%; }
-        50% { background-position: 50% 100%; }
-        100% { background-position: 50% 0%; }
+    --animate-aurora1: aurora-move-1 12s ease-in-out infinite;
+    --animate-aurora2: aurora-move-2 15s ease-in-out infinite;
+
+    @keyframes aurora-move-1 {
+        0%   { transform: translateX(-50%) translateY(-30%) rotate(15deg); }
+        25%  { transform: translateX(30%) translateY(40%) rotate(-10deg); }
+        50%  { transform: translateX(50%) translateY(80%) rotate(20deg); }
+        75%  { transform: translateX(-30%) translateY(40%) rotate(-15deg); }
+        100% { transform: translateX(-50%) translateY(-30%) rotate(15deg); }
     }
+
+    @keyframes aurora-move-2 {
+        0%   { transform: translateX(40%) translateY(-20%) rotate(-10deg); }
+        25%  { transform: translateX(-50%) translateY(30%) rotate(10deg); }
+        50%  { transform: translateX(-40%) translateY(90%) rotate(-20deg); }
+        75%  { transform: translateX(50%) translateY(30%) rotate(15deg); }
+        100% { transform: translateX(40%) translateY(-20%) rotate(-10deg); }
+    }
+
+
 }
 
 /* Dark theme overrides */
@@ -46,5 +60,29 @@
     --color-gradient-1-end:   #00bcb4;
 
 }
+
+.aurora-layer {
+    position: absolute;
+    width: 150%;
+    height: 60%;
+    border-radius: 50%;
+    filter: blur(6rem);
+    opacity: 0.4;
+    background: linear-gradient(90deg, var(--color-gradient-1-start), var(--color-gradient-1-mid), var(--color-gradient-1-end));
+}
+
+.aurora1 {
+    animation: var(--animate-aurora1);
+    top: 0;
+    left: -25%;
+}
+
+.aurora2 {
+    animation: var(--animate-aurora2);
+    top: 10%;
+    left: -10%;
+    opacity: 0.3;
+}
+
 
 

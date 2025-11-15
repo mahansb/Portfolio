@@ -7,116 +7,120 @@
     <link rel="stylesheet" href="./output.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-body">
+<body class="bg-body overflow-x-hidden">
+
+<div class="fixed inset-0 z-0 pointer-events-none">
+    <div class="aurora-layer aurora1"></div>
+    <div class="aurora-layer aurora2"></div>
+    <!-- Add more layers if needed -->
+</div>
 
 <!-- header -->
-<header class=" flex justify-center items-center w-full h-[150px] bg-gradient-to-b from-body to-navBar">
-
+<header class="flex justify-center items-center w-full h-[150px] bg-transparent">
     <!-- navbar -->
-    <nav class="flex items-center justify-between w-[85%] mx-auto py-3 md:w-[90%] rounded-3xl border-[3px]
-    border-border bg-navBar shadow-lg z-40">
+    <nav class="flex items-center justify-between w-[85%] py-3 md:w-[90%] rounded-3xl border-border border-[3px] bg-navBar shadow-lg z-40">
 
-        <!-- Left: Profile pic -->
-        <div class="pl-6 flex-1">
-            <img src="./assets/images/img2.png" alt="Profile photo"
-                 class="w-17 h-17 hover:scale-110 transition-transform duration-300 cursor-pointer
+            <!-- Left: Profile pic -->
+            <div class="pl-6 flex-1">
+                <img src="./assets/images/img2.png" alt="Profile photo"
+                     class="w-17 h-17 hover:scale-110 transition-transform duration-300 cursor-pointer
                  bg-color-white rounded-2xl object-cover border-2 border-border shadow-md">
-        </div>
-
-        <!-- Center: Desktop Menu -->
-        <ul class="hidden md:flex justify-center items-center flex-1 text-text text-lg">
-            <li>
-                <a href="#about"
-                   class="px-4 py-2 rounded-lg hover:text-color-white hover:bg-hover
-                   duration-300">
-                    About
-                </a>
-            </li>
-            <li>
-                <a href="#project"
-                   class="px-4 py-2 rounded-lg hover:text-color-white hover:bg-hover transition-colors
-                   duration-300">
-                    Projects
-                </a>
-            </li>
-            <li>
-                <a href="#contact"
-                   class="px-4 py-2 rounded-lg hover:text-color-white hover:bg-hover transition-colors
-                   duration-300">
-                    Contact
-                </a>
-            </li>
-        </ul>
-
-
-        <!-- Right: Desktop Buttons -->
-        <div class="flex items-end justify-end pr-6 space-x-4 flex-1">
-            <!-- Desktop buttons -->
-            <div class="hidden md:flex items-center space-x-4">
-                <button class="theme-toggle w-16 h-10 rounded-lg bg-color-white shadow-md hover:scale-110 transition-all
-                duration-300">
-                    🌙
-                </button>
-                <button class="w-16 h-10 rounded-lg bg-color-white shadow-md hover:scale-110 transition-all
-                 duration-300">
-                    🌐
-                </button>
             </div>
-        </div>
 
-        <!-- Hamburger -->
-        <button id="hamburger-btn"
-                class="md:hidden flex flex-col justify-between mr-6 w-5 h-5 z-50 transform transition-transform
+            <!-- Center: Desktop Menu -->
+            <ul class="hidden md:flex justify-center items-center flex-1 text-text text-lg">
+                <li>
+                    <a href="#about"
+                       class="px-4 py-2 rounded-lg hover:text-color-white hover:bg-hover
+                   duration-300">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#project"
+                       class="px-4 py-2 rounded-lg hover:text-color-white hover:bg-hover transition-colors
+                   duration-300">
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact"
+                       class="px-4 py-2 rounded-lg hover:text-color-white hover:bg-hover transition-colors
+                   duration-300">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+
+            <!-- Right: Desktop Buttons -->
+            <div class="flex items-end justify-end pr-6 space-x-4 flex-1">
+                <!-- Desktop buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="theme-toggle w-16 h-10 rounded-lg bg-color-white shadow-md hover:scale-110 transition-all
                 duration-300">
-            <span class="block h-0.5 w-full bg-border-dark rounded transform transition duration-300 origin-center"></span>
-            <span class="block h-0.5 w-full bg-border-dark rounded transform transition duration-300 origin-center"></span>
-            <span class="block h-0.5 w-full bg-border-dark rounded transform transition duration-300 origin-center"></span>
-        </button>
+                        🌙
+                    </button>
+                    <button class="w-16 h-10 rounded-lg bg-color-white shadow-md hover:scale-110 transition-all
+                 duration-300">
+                        🌐
+                    </button>
+                </div>
+            </div>
 
-        <!--Sliding Mobile Menu-->
-        <ul id="mobile-menu"
-            class="fixed top-0 right-0 w-md max-sm:w-[75%] md:hidden h-screen rounded-l-lg border-[3px]
+            <!-- Hamburger -->
+            <button id="hamburger-btn"
+                    class="md:hidden flex flex-col justify-between mr-6 w-5 h-5 z-50 transform transition-transform
+                duration-300">
+                <span class="block h-0.5 w-full bg-border-dark rounded transform transition duration-300 origin-center"></span>
+                <span class="block h-0.5 w-full bg-border-dark rounded transform transition duration-300 origin-center"></span>
+                <span class="block h-0.5 w-full bg-border-dark rounded transform transition duration-300 origin-center"></span>
+            </button>
+
+            <!--Sliding Mobile Menu-->
+            <ul id="mobile-menu"
+                class="fixed top-0 right-0 w-md max-sm:w-[75%] md:hidden h-screen rounded-l-lg border-[3px]
             border-border bg-navBar-dark flex flex-col pt-30 px-5 space-y-5 transform
             translate-x-full opacity-0 transition-all duration-500 z-45 shadow-xl">
-            <!-- Menu items -->
-            <li>
-                <a href="#about"
-                   class="inline-block w-full text-center text-text
+                <!-- Menu items -->
+                <li>
+                    <a href="#about"
+                       class="inline-block w-full text-center text-text
                     border border-text/40 hover:bg-border hover:text-text-secondary rounded-lg px-4 py-3
                     transition-all duration-300 shadow-sm">
-                    About
-                </a>
-            </li>
+                        About
+                    </a>
+                </li>
 
-            <li>
-                <a href="#project"
-                   class="inline-block w-full text-center text-text
+                <li>
+                    <a href="#project"
+                       class="inline-block w-full text-center text-text
                     border border-text/40 hover:bg-border hover:text-text-secondary rounded-lg px-4 py-3
                     transition-all duration-300 shadow-sm">
-                    Projects
-                </a>
-            </li>
-            <li>
-                <a href="#contact"
-                   class="inline-block w-full text-center text-text
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact"
+                       class="inline-block w-full text-center text-text
                     border border-text/40 hover:bg-border hover:text-text-secondary rounded-lg px-4 py-3
                     transition-all duration-300 shadow-sm">
-                    Contact
-                </a>
-            </li>
+                        Contact
+                    </a>
+                </li>
 
-            <div class="flex items-center space-x-4 mt-auto mb-6">
-                <button class="theme-toggle flex-1 h-10 rounded-lg bg-color-white shadow-md hover:scale-110
+                <div class="flex items-center space-x-4 mt-auto mb-6">
+                    <button class="theme-toggle flex-1 h-10 rounded-lg bg-color-white shadow-md hover:scale-110
                 transition-all duration-300">
-                    🌙
-                </button>
-                <button class="flex-1 h-10 rounded-lg bg-color-white shadow-md hover:scale-110
+                        🌙
+                    </button>
+                    <button class="flex-1 h-10 rounded-lg bg-color-white shadow-md hover:scale-110
                 transition-all duration-300">
-                    🌐
-                </button>
-            </div>
-        </ul>
-    </nav>
+                        🌐
+                    </button>
+                </div>
+            </ul>
+        </nav>
 </header>
 
 <!-- Hero Section -->
@@ -285,7 +289,7 @@
 </section>
 
 <!-- Contact Section -->
-<section data-aos="fade-up" id="contact" class="w-[90%] mx-auto mt-15 md:mt-10 text-center flex flex-col items-center justify-center space-y-5">
+<section data-aos="fade-up" id="contact" class="w-[90%] mx-auto pb-8 mt-15 md:mt-10 text-center flex flex-col items-center justify-center space-y-5">
     <div class="w-24 h-1 bg-gradient-to-r from-gradient-start to-gradient-end rounded mb-4"></div>
     <h2 class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text
                bg-gradient-to-r from-gradient-start to-gradient-end">
@@ -304,9 +308,9 @@
 </section>
 
 <!-- Footer -->
-<footer class="w-full py-6 mt-5 bg-navBar-dark text-text/70 text-center">
-    <p>© 2025 Mahan Soudeh Sarabi. All rights reserved.</p>
-</footer>
+<!--<footer class="w-full py-6 mt-5 bg-navBar-dark text-text/70 text-center">-->
+<!--    <p>© 2025 Mahan Soudeh Sarabi. All rights reserved.</p>-->
+<!--</footer>-->
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="app.js"></script>
