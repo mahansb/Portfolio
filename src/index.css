@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+    --color-body: #dedeef;
+    --color-navBar: #bebedc;
+    --color-navBar-dark: #8C8CB5;
+    --color-text: #1c1c31;
+    --color-text-secondary: #E2E2ED;
+    --color-border: #656591;
+    --color-border-dark: #4E4E78;
+    --color-hover: #4a4a73;
+    --color-color-white: #E2E2ED;
+    --color-gradient-start: #4a4a73;
+    --color-gradient-end: #1c1c31;
+}
+
+.dark {
+    --color-body: #0f0f1a;
+    --color-navBar: #1a1a2e;
+    --color-navBar-dark: #1a1a2e;
+    --color-text: #66fff9;
+    --color-text-secondary: #102A28;
+    --color-border: #00fff3;
+    --color-border-dark: #00fff3;
+    --color-hover: #00e6d9;
+    --color-color-white: white;
+    --color-gradient-start: #00fff3;
+    --color-gradient-end: #00e6d9;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--color-body);
+    }
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-up {
+    animation: fade-up 0.8s ease-out forwards;
+}
+
+.animate-zoom-in {
+    animation: zoom-in 0.6s ease-out forwards;
+}
