@@ -23,7 +23,7 @@ const MobileMenu = ({ isOpen, onClose, links, theme, onToggleTheme }) => {
 
       <ul
         className={`fixed top-0 right-0 w-[75%] md:hidden h-screen rounded-l-lg border-[3px]
-        border-border bg-navBar-dark/95 backdrop-blur-md flex flex-col pt-30 px-5 space-y-5
+        border-border bg-navBar-dark/95 backdrop-blur-md flex flex-col pt-24 px-5 space-y-5
         transform transition-all duration-500 z-45 shadow-xl
         ${isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}
       >
@@ -41,17 +41,15 @@ const MobileMenu = ({ isOpen, onClose, links, theme, onToggleTheme }) => {
           </li>
         ))}
 
-        <div className="flex items-center space-x-4 mt-auto mb-6">
-          <button
-            onClick={onToggleTheme}
-            className="flex-1 h-10 rounded-lg bg-color-white shadow-md hover:scale-110 transition-all duration-300"
-          >
-            {theme === "dark" ? "☀️" : "🌙"}
-          </button>
-          {/* <button className="flex-1 h-10 rounded-lg bg-color-white shadow-md hover:scale-110 transition-all duration-300">
+        <button
+          onClick={onToggleTheme}
+          className="flex items-center justify-center px-4 py-3 rounded-lg border border-text/40 shadow-md hover:scale-110 transition-all duration-300"
+        >
+          {theme === "dark" ? "☀️" : "🌙"}
+        </button>
+        {/* <button className="flex-1 h-10 rounded-lg bg-color-white shadow-md hover:scale-110 transition-all duration-300">
             🌐
           </button> */}
-        </div>
       </ul>
     </>
   );
